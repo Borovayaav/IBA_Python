@@ -101,22 +101,22 @@ for N in range(1000, 5001, 1000):
     t5 = datetime.datetime.now()
     InsertionSort(I)
     t6 = datetime.datetime.now()
-    y1.append((t2 - t1).total_seconds())
+    y3.append((t2 - t1).total_seconds())
     print("Сортировка вставками   " + str(N) + "   заняла   " + str((t6 - t5).total_seconds()) + "c")
 
     t7 = datetime.datetime.now()
     SelectionSort(S)
     t8 = datetime.datetime.now()
-    y1.append((t2 - t1).total_seconds())
+    y4.append((t8 - t7).total_seconds())
     print("Сортировка выбором  " + str(N) + "   заняла   " + str((t8 - t7).total_seconds()) + "c")
 
     table.add_row([str(N), str((t2 - t1).total_seconds()), str((t4 - t3).total_seconds()), str((t6 - t5).total_seconds()), str((t8 - t7).total_seconds())])
 print(table)
 
-plt.plot(x, y1, "C0")
-plt.plot(x, y2, "C1")
-plt.plot(x, y3, "C2")
-plt.plot(x, y4, "C3")
+plt.plot(x, y1, "C1")
+plt.plot(x, y2, "C2")
+plt.plot(x, y3, "C3")
+plt.plot(x, y4, "C4")
 plt.show()
 
 
